@@ -25,6 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors.handle);
+app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+})
 app.use("/", indexRouter);
 app.use("/account", accountRouter);
 app.use("/product", productRouter);
