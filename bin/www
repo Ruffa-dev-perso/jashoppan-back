@@ -18,8 +18,8 @@ app.set("port", port);
 
 
 const options = {
-     key: fs.readFileSync('/etc/letsencrypt/live/rott.schlap.fr/fullchain.pem'),
-     cert: fs.readFileSync('/etc/letsencrypt/live/rott.schlap.fr/privkey.pem')
+     key: fs.readFileSync('/home/pi/Documents/jashoppan-back/fullchain.pem'),
+     cert: fs.readFileSync('/home/pi/Documents/jashoppan-back/privkey.pem')
 };
 /**
  * Create HTTP server.
