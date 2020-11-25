@@ -18,8 +18,8 @@ app.set("port", port);
 
 
 const options = {
-     key: fs.readFileSync('SSLCertificateFile /etc/letsencrypt/live/rott.schlap.fr/fullchain.pem'),
-     cert: fs.readFileSync('SSLCertificateKeyFile /etc/letsencrypt/live/rott.schlap.fr/privkey.pem')
+     key: fs.readFileSync('/etc/letsencrypt/live/rott.schlap.fr/fullchain.pem'),
+     cert: fs.readFileSync('/etc/letsencrypt/live/rott.schlap.fr/privkey.pem')
 };
 /**
  * Create HTTP server.
