@@ -5,10 +5,10 @@
 
 const cors = {
   handle: (req, res, next) => {
-    res.header(
+    /*res.header(
       "Access-Control-Allow-Origin",
       process.env.NODE_ENV === 'production' ? "http://localhost:3000/" : "https://ruffa-dev-perso.github.io/"
-    );
+    );*/
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept, Authorization"
