@@ -17,15 +17,12 @@ app.set("port", port);
 
 
 
-const options = {
-     key: fs.readFileSync('/home/pi/Documents/jashoppan-back/fullchain.pem'),
-     cert: fs.readFileSync('/home/pi/Documents/jashoppan-back/privkey.pem')
-};
+
 /**
  * Create HTTP server.
  */
 /*https.createServer(app);*/
-const server = https.createServer(options, app)
+const server = https.createServer(app)
 
 /**
  * Listen on provided port, on all network interfaces.
