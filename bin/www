@@ -7,7 +7,7 @@
 const app = require("../app");
 const debug = require("debug")("api-web-jashoppan:server");
 const https = require("https");
-
+const fs = require('fs');
 /**
  * Get port from environment and store in Express.
  */
@@ -15,6 +15,12 @@ const https = require("https");
 const port = normalizePort(process.env.PORT || "4000");
 app.set("port", port);
 
+
+
+const options = {
+     key: fs.readFileSync('SSLCertificateFile /etc/letsencrypt/live/rott.schlap.fr/fullchain.pem'),
+     cert: fs.readFileSync('SSLCertificateKeyFile /etc/letsencrypt/live/rott.schlap.fr/privkey.pem')
+};
 /**
  * Create HTTP server.
  */
